@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+}
+
+jar {
+    archiveFileName = 'server.jar'
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+}
