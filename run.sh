@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-[ -f .env ] && { set -a; source .env; set +a; }
+[ -f .env ] && { set -a; . .env; set +a; }
 declare -A arch=( ["x86_64"]="amd64" ["aarch64"]="arm64" )
 arch=${arch[$(uname -m)]:?Unsupported arch: $(uname -m)}
 curl -fsSL https://github.com/SagerNet/sing-box/releases/download/v1.11.4/sing-box-1.11.4-linux-$arch.tar.gz \
